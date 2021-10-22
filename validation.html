@@ -1,0 +1,278 @@
+<html>
+
+<head>
+  <title>new nav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"></script>
+  <script type="text/javascript" language="javascript"
+    src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <!----multiselect cdn-->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+  <!-- Include Twitter Bootstrap and jQuery: -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.14/js/bootstrap-multiselect.min.js"
+    integrity="sha512-ByDbyutg5bTK+6f4Ke7Fgcg2I2fMUnOdzwC+F/ECFpgde2o2QHRVTFa//oeAHrJuAGX61DPNeKA80KA6V+ca7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.14/css/bootstrap-multiselect.css"
+    integrity="sha512-EvvoSMXERW4Pe9LjDN9XDzHd66p8Z49gcrB7LCUplh0GcEHiV816gXGwIhir6PJiwl0ew8GFM2QaIg2TW02B9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.14/js/bootstrap-multiselect.js"
+    integrity="sha512-CoQowxKxumTPPSTrsNoJ0VU1Sd6QFUXvEX/CLD2h2/peHOLb5IfkLT1cK/DeACOe5ixA4zgJzcX5g59TnEkV8w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    form * {
+      border-radius: 0 !important;
+    }
+
+    form>fieldset>legend {
+      font-size: 120%;
+    }
+
+
+    .raj {
+      background-color: cornsilk;
+      border: 4px solid red;
+      width: 970px;
+      margin-left: 80px;
+      margin-right: 70px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+
+
+    }
+
+    input[type=text] {
+      width: 340px;
+    }
+
+    .row {
+      margin-left: -125px;
+    }
+
+    legend {
+      text-align: center;
+    }
+
+    .one {
+      background-color: darkcyan;
+      height: 900px;
+      width: 1200px;
+    }
+
+
+    li a:hover(.active) {
+      background-color: gray;
+    }
+
+    .three {
+      float: right;
+      margin-top: 65px;
+      margin-right: -165px;
+    }
+
+    #example-getting-started {
+      width: 100%;
+    }
+
+    #extracourses {
+      border: honeydew;
+      height: 35px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="one">
+    <div class="navcolor">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown1<span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown2<span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">about</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">contact</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="validation.html">Registeration form</a></li>
+            <li><a href="mtable.html">DataTable</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="whole">
+      <div class="container">
+        <div class="raj">
+          <div class="row">
+
+            <div class="col-md-8 col-md-offset-2">
+              <form role="form" method="POST" action="#" class="myname" action="table-Javascript-localstorsage.html">
+
+                <fieldset>
+                  <legend>Register info</legend>
+
+                  <div class="form-group col-md-6">
+                    <label for="first_name">First name</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name">
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="last_name">Last name</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name">
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="">Mobile</label>
+                    <input type="text" class="form-control" name="" id="mobile_number" placeholder="Mobile number">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="">designation</label>
+                    <input type="text" class="form-control" name="" id="designation" placeholder="designation">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Gender:</label><br>
+                    <div class="form-check form-check-inline">
+                      <input type="radio" name="gender" value="male" id="male">
+                      <label>Male</label><br>
+                      <input type="radio" name="gender" value="female" id="female">
+                      <label>Female</label><br>
+                    </div>
+
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="">experience</label>
+                    <input type="text" class="form-control" name="" id="experience" placeholder="experience">
+                  </div>
+                  <div class="form-group col-lg-12">
+                    <label for="first_name">password</label>
+                    <input type="text" class="form-control" name="" id="password" placeholder="Enter the password">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="exampleFormControlTextarea1">Project details:</label>
+                    <textarea class="form-control" id="project" rows="1"></textarea>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Courses:</label><br>
+                    <select id="example-getting-started" multiple="multiple">
+                      <option value="HTML">HTML</option>
+                      <option value="CSS">CSS</option>
+                      <option value="JAVASCRIPT">JAVASCRIPT</option>
+                      <option value="jquery">jquery</option>
+                      <option value="angular">ANGULAR</option>
+                      <option value="REACT">REACT</option>
+                      <option value="JAVA">JAVA</option>
+                      <option value="c++">c++</option>
+                      <option value="C">C</option>
+                      <option value="Ruby">Ruby</option>
+                      <option value="Sql">Sql</option>
+                      <option value="net">.net</option>
+                      <option value="php">php</option>
+                      <option value="networking">networking</option>
+                      <option value="mysql">mysql</option>
+                      <option value="others" id="button" class="button">others</option>
+                    </select>
+                  </div>
+
+                  <div class="Courses1" id="extras">
+                    <label>ExtreCourses:</label><br>
+                    <input type="text" name="extracourses" id="extracourses" placeholder="extracourses">
+                  </div>
+                  <div class="form-group col-md-12" >
+                    <label for="Textarea1">About</label>
+                    <textarea class="form-control" id="Textarea1" rows="3"></textarea>
+                  </div>
+               
+
+              </form>
+              <div class="three">
+                <button type="button" class="btn btn-primary btn-lg" id="entry" onclick="validate()">submit</button>
+
+                <button type="button" class="btn btn-primary btn-lg">Clear</button>
+                <button type="button" class="btn btn-primary btn-lg">Cancel</button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+
+  $(document).ready(function () {
+
+    $('#example-getting-started').multiselect();
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var check = url.searchParams.has("id");
+    check = check.toString();
+    var id = url.searchParams.get("id");
+    id = parseInt(id);
+    var chk = check.localeCompare("true");
+    if (chk != 0) {
+      $(".courses1").hide();
+      var count = 0;
+      $('.button').change(function () {
+
+        if (count % 2 == 0) {
+          $(".courses1").show();
+          count++;
+        }
+
+        else {
+          $(".courses1").hide();
+          document.getElementById("extracourses").value;
+          count++;
+        }
+
+      })
+    }
+    else {
+      var extra = document.getElementById("extracourses").value;
+      if (extra.length == 0) {
+        $(".courses1").hide();
+      }
+    }
+
+  });
+
+</script>
+<script src="demo.js"></script>
+
+</html>

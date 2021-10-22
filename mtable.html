@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>datatable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css">
+</head>
+
+<body>
+    <div class="raja">
+        <div class="navcolor">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="home.html">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown1<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1</a></li>
+                                <li><a href="#">Page 2</a></li>
+                                <li><a href="#">Page 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown2<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">menu</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="validation.html">Registeration Form</a></li>
+                        <li class="active"><a href="mtable.html">DataTable</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <table id="example" class="display" width="100%">
+
+    </table>
+    <script>
+
+        var todo = JSON.parse(localStorage.getItem('studentsRecord'));
+
+        var x = [];
+        for (let i = 0; i < todo.length; i++) {
+            var y = [];
+            var name = todo[i].first_name + " " + todo[i].last_name;
+            var mobile_number = todo[i].mobile_number;
+            var designation = todo[i].designation;
+            var experience = todo[i].experience;
+            var courses = todo[i].courses;
+            var About = todo[i].about.substring(0, 50);
+            var project = todo[i].project;
+            var id = todo[i].id;
+
+
+
+            function callme(id) {
+                location.href = "validation.html?id=" + parseInt(id);
+            }
+            y.push(name);
+            y.push(experience);
+            y.push(courses);
+            y.push(About +`<span type="button" class="btn btn-secondary" data-toggle="tooltip" title="${todo[i].about} ">....</span>`);
+            y.push(project);
+            y.push(mobile_number);
+            y.push(`<button onClick="callme(${id})">View</buttton>`)
+            x.push(y);
+           
+        }
+
+        console.log(x);
+        $(document).ready(function () {
+            $('#example').DataTable({
+                data: x,
+                columns: [
+
+                    { title: "Name" },
+                    { title: "experience" },
+                    { title: "courses" },
+                    { title: "about" },
+                    { title: "project" },
+                    { title: "mobile_number" },
+                    { title: "Action" }
+                ]
+            });
+        });
+        $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                })
+    </script>
+</body>
+
+</html>
